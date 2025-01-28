@@ -55,7 +55,7 @@ body{
 }
 
 .pannel h1{
-  position: relative;
+  position: absolute;
   opacity: 0;
   left:0.3rem;
   font-size: 2rem;
