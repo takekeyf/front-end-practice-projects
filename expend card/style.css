@@ -43,8 +43,8 @@ body{
   flex:0.5;
   border-radius: 1.5rem;
   cursor: pointer;
-  transition: 
-    flex 600ms cubic-bezier(0.4 0 0.2 1);
+  transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 
@@ -61,18 +61,21 @@ body{
   font-size: 2rem;
   color: rgb(11, 162, 204);
   bottom: 0;
-
+ 
 
 
 }
 .pannel.active h1 {
     opacity: 0.8;
+   
+    
   
 }
 
 /* 添加悬停微交互 */
 .pannel:not(.active):hover{
   flex:0.7;
+    
   
 
 
