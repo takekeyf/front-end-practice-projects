@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'TiejiliSC Regular', sans-serif;
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.rote-container {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  /* position: relative; */
+  transition: transform 0.5s linear;
+}
+
+.container.rote-container .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+/* .circle button:focus {
+  outline: none;
+} */
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+
+.content{
+    text-align: center;
+
+}
+.content h1,h2,p{
+  font-size:2rem;
+  margin-bottom: 2rem;
+
+
+}
+img{
+  width:30vw;
+  margin-bottom: 2rem;
+}
+
+.navigation {
+  position: fixed;
+  left: 3rem;
+  bottom: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ 
+  list-style-type: none;
+  font-size: 2rem;
+  
+}
+
+.navigation ul li {
+  margin: 1rem 0;
+  transform: translateX(-250%);
+  transition: transform 0.3s ease-in-out;
+ 
+  transition-delay: 0.3s;
+ 
+}
+
+.navigation ul li:nth-child(2) { 
+  margin-left: 1.5rem; 
+  transition-delay: 0.5s;
+}
+
+.navigation ul li:nth-child(3) {
+  margin-left: 3rem;
+  transition-delay: 0.7s;
+}
+.navigation.active ul li{
+  transform: translateX(0);
+}
+.navigation ul li i{
+  display: flex;
+  gap:1rem;
+}
