@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+body{
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height: 100vh;
+  background-image: url('/img/blurry-loading/img-001.png');
+  background-size: cover;
+  z-index:-1;
+  filter: blur(0);
+  transition: filter 0s;
+
+
+}
+.loading{
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size:3rem;
+}
