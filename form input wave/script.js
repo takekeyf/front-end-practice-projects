@@ -16,7 +16,7 @@ labels.forEach( ( label ) => {
 
 
 
-// 激活label（保持原有逻辑）
+// 激活label的动画效果
 function activateLabel( label ) {
     const spans = label.querySelectorAll( 'span' );
     spans.forEach( ( span, index ) => {
@@ -26,7 +26,7 @@ function activateLabel( label ) {
     } );
 }
 
-// 改为反向遍历
+// 反向遍历label，逐个字符移除active类
 function deactivateLabel( label ) {
     const spans = label.querySelectorAll( 'span' );
     Array.from( spans ).reverse().forEach( ( span, index ) => {
