@@ -43,14 +43,7 @@ inputs.forEach( ( input, index ) => {
     const label = labels[ index ];
 
     input.addEventListener( 'focus', () => {
-        labels.forEach( ( otherLabel, otherIndex ) => {
-            if ( otherIndex !== index ) {
-                // 仅当其他输入框为空时关闭其label
-                if ( !inputs[ otherIndex ].value.trim() ) {
-                    deactivateLabel( otherLabel );
-                }
-            }
-        } );
+
         activateLabel( label );
     } );
 
@@ -60,8 +53,6 @@ inputs.forEach( ( input, index ) => {
         }
 
     } );
-    if ( input.value.trim() ) {
-        activateLabel( label );
-    }
+
 
 } );
