@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+body{
+  background-color: rgba(193, 171, 144, 0.5);
+}
+#buttons{
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+
+  
+
+}
+
+.btn{
+  margin:1rem 3rem;
+  padding:1rem 3rem;
+  background-color: rgb(108, 185, 159);
+  border: 0;
+  color:white;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(57, 242, 180);
+}
