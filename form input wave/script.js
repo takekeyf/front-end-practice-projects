@@ -1,14 +1,7 @@
 const inputs = document.querySelectorAll( '.form-control input' );
 const labels = document.querySelectorAll( '.form-control label' );
 
-// 初始化：检查输入框是否有内容
-function initLabels() {
-    inputs.forEach( ( input, index ) => {
-        if ( input.value.trim() ) {
-            activateLabel( labels[ index ] );
-        }
-    } );
-}
+
 
 // 逐个字符分割label
 labels.forEach( ( label ) => {
@@ -21,8 +14,7 @@ labels.forEach( ( label ) => {
     } );
 } );
 
-// 初始化执行
-initLabels();
+
 
 // 激活label（保持原有逻辑）
 function activateLabel( label ) {
@@ -44,12 +36,7 @@ function deactivateLabel( label ) {
     } );
 }
 
-// 修改检查逻辑：仅在输入为空且失去焦点时复原
-function checkDeactivate( label, input ) {
-    if ( !input.value.trim() && document.activeElement !== input ) {
-        deactivateLabel( label );
-    }
-}
+
 
 // 事件监听
 inputs.forEach( ( input, index ) => {
@@ -67,12 +54,14 @@ inputs.forEach( ( input, index ) => {
         activateLabel( label );
     } );
 
-    input.addEventListener( 'blur', () => checkDeactivate( label, input ) );
-    input.addEventListener( 'input', () => {
-        if ( input.value.trim() ) {
-            activateLabel( label );
-        } else {
-            checkDeactivate( label, input );
+    input.addEventListener( 'blur', () => {
+        if ( !input.value.trim() ) {
+            deactivateLabel( label );
         }
+
     } );
+    if ( input.value.trim() ) {
+        activateLabel( label );
+    }
+
 } );

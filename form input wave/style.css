@@ -57,10 +57,14 @@ body{
   display: block;
   background-color: transparent;
   border:none;
-  border-bottom: 1px solid brown;
+  border-bottom: 2px solid brown;
   margin:2rem 0 2rem;
   height:5rem;
   font-size:2rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 1rem;
+
 }
 .form-control input:focus,.form-control input:valid{
   outline: none;
