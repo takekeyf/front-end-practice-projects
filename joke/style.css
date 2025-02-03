@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+.container{
+  width:80rem;
+  height: 70rem;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(83, 145, 124,0.7);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+.container h3{
+  font-size: 4rem;
+  text-align: center;
+ 
+  margin-top: 2rem;
+
+}
+.container .joke{
+  width:90%;
+  height:70%;
+  font-size: 2rem;
+  background-color: aliceblue;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-self: center;
+  margin: 4rem 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+.container .btn{
+  width:90%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  background-color: #be72a2;
+  display: flex;
+  font-family: inherit;
+  border:none;
+  justify-self: center;
+  align-self: center;
+    justify-content: center; 
+  align-items: center;    
+  text-align: center;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .btn:hover{
+  background-color: #813866;
+}
+.container .btn:active{
+  transform: scale(0.9);
+}
