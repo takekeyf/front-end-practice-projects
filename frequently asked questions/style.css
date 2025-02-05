@@ -55,7 +55,7 @@ h1{
   width:90rem;
   margin:2rem 1rem;
   padding: 1rem;
-  transition:all 0.3s ease;
+  transition:all 0.5s ease-in-out;
   position: relative;
 }
 .faq.active{
@@ -98,6 +98,10 @@ h1{
 }
 .faq.active .faq-toggle .fa-times{
   display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: azure;
 }  
 
 .faq.active .faq-toggle .fa-chevron-down{
