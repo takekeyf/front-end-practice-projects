@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+body,html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  font-size: 2rem;
+  background-color: #f2f2f2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.faq-container{
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+   max-width: 60rem;
+   margin:0 auto;
+   justify-self: center;
+
+  
+
+
+
+}
+h1{
+  margin:2rem;
+  font-size: 4rem;
+  color: rgb(56, 56, 191);
+}
+.faq{
+  background-color: transparent;
+  border:1px solid #dabfbf;
+  border-radius: 1rem;
+  width:90rem;
+  margin:2rem 1rem;
+  padding: 1rem;
+  transition:all 0.3s ease;
+  position: relative;
+}
+.faq.active{
+  background-color: #f6d2d2;
+  
+}
+.faq.active .faq-text{
+  display: block;
+}
+
+
+.faq-title{
+  font-size: 3rem;
+  color: rgb(56, 56, 191);
+  margin-bottom: 0.7rem;
+
+
+}
+.faq-text{
+  display: none;
+  font-size:2rem;
+  color:rgb(125, 70, 2);
+  margin:2rem;
+  text-align: left;
+  
+}
+
+.faq-toggle{
+  background-color: transparent;
+  border:0;
+  position: absolute;
+  top:50%;
+  right:1rem;
+  transform: translateY(-50%);
+  
+  font-size:2rem;
+}
+.faq-toggle .fa-times{
+  display:none;
+}
+.faq.active .faq-toggle .fa-times{
+  display: block;
+}  
+
+.faq.active .faq-toggle .fa-chevron-down{
+  display: none;
+}
+.faq-toggle .fa-chevron-down{
+  display: block;
+}
