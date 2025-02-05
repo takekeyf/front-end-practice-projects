@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+  height: 100%;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 渐变背景 */
+  background: linear-gradient(95deg, #cf7979, #67b4b8);
+  
+  
+}
+.container{
+  display: flex;
+  width:60%;
+  height: 20%;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.info-label{
+   font-size: 4rem;
+   box-shadow:1px 1px 3px #67b4b8;
+   display: inline-flex;
+   border: 1px solid #f8f5f5;
+   margin: 2rem;
+   border-radius: 1rem;
+   color:white;
+   padding: 2rem 6rem;
+   align-items: center;
+   justify-content: center;
+   justify-items: center;
+   position: relative;
+   text-align: center;
+  
+
+
+}
+.info-label small{
+  position: absolute;
+  top:-4rem;
+  font-size: 2rem;
+  color:rgb(12, 104, 150);
+ 
+}
