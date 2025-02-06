@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin:0;
+}
+.counter-container{
+  display: flex;
+  flex-direction: column;
+  width:30%;
+  height:40%;
+  background-color: rgba(168, 98, 234, 0.8);
+  justify-content: center;
+  align-items: center;
+  color:white;
+
+  font-size:2rem;
+}
+.counter-container .counter{
+  margin: 2rem;
+}
+.counter-container i{
+  cursor: pointer;
+}
+.counter-container i:active{
+  transform: scale(0.9);
+  color:rgb(235, 149, 149);
+  transition: transform 0.1s ease-in-out;
+}
+.btn{
+  background-color: rgb(171, 126, 179);
+  border: none;
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 24%;
+  width:90%;
+  border-radius: 1rem;
+  color:aliceblue;
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn:active{
+  transform: scale(0.9);
+  transition: all 0.1s ease-in-out;
+  background-color: rgb(235, 149, 149);
+}
