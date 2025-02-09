@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'SarasaMonoSC-Regular';
+  src: url('/fonts/SarasaMonoSC-Regular.ttf') format('truetype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'SarasaMonoSC-Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+
+body{
+  background-color:rgb(149, 216, 247);
+  margin:0;
+}
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  margin:1rem;
+
+
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem;
+  padding: 1rem;
+}
+.container-card{
+  position: relative;
+  width:20rem;
+  height: 20rem;
+  margin:0;
+  perspective: 100rem;
+  cursor:pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.search{
+  border-radius: 1rem;
+  border:2px solid blue;
+  font-family: inherit;
+  font-size: 2rem;
+  padding-left:1rem;
+  caret-color: blue;
+}
+.search:focus{
+  outline: none;
+}
+.front,.back{
+  width:20rem;
+  height: 20rem;
+  background-color:white;
+  overflow: hidden;
+  position: absolute;
+  backface-visibility: hidden;
+  transition:transform 0.5s ease-in-out;
+}
+.front{
+  transform:rotateY(0deg);
+}
+.back{
+  transform: rotateY(180deg);
+  font-size:1.5rem;
+  padding:2rem;
+  
+}
+.container-card.active .front{
+  transform: rotateY(180deg);
+}
+.container-card.active .back{
+  transform: rotateY(360deg);
+}
+
+.anime-info{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin:0;
+  bottom:0;
+  width:100%;
+
+  padding:0.5rem;
+  
+}
+.anime-info h3{
+  font-size:1.5rem;
+
+}
+ .score{
+  font-size:1.5rem;
+  font-weight: bold;
+  padding:0.1rem 0.2rem;
+  background-color: rgb(173, 201, 225);
+  display: flex;
+  align-self: flex-end;
+
+}
+.score.green{
+  color:green;
+}
+.score.red{
+  color:red;
+}
+.score.blue{
+  color:blue;
+}
+
+.front img{
+  width:100%;
+  object-fit: cover;
+  height:12rem;
+  display: block;
+
+}
+.overview{
+
+  padding:0.2rem;
+  font-size:1rem;
+  width:100%;
+  height:100%;
+  background-color: rgb(48, 235, 235);
+  transform: translateY(50%);
+  transition: all 0.5s ease-in-out;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.overview p{
+  font-size:1rem;
+  margin: 0;
+  position: absolute;
+  bottom:80%;
+}
+.front:hover .overview{
+  transform: translateY(0);
+}
+.overview:hover p{
+   bottom:100%;
+   transition: all 5s linear;
+  
+}
