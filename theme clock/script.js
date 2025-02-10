@@ -29,11 +29,11 @@ function updateClock() {
     const empm = hours >= 12 ? 'PM' : 'AM';
 
     //让秒针追赶上数字时钟的秒针
-    let secondDeg = seconds * 6;
+    let secondDeg = seconds * ( 360 / 60 );
     //先让分针追赶上数字时钟的分针，再缓慢移动，1s移动0.1度
-    let minuteDeg = minutes * 6 + seconds * 0.1;
+    let minuteDeg = minutes * 6 + seconds * ( 360 / 60 / 60 );
     //先让时针追赶上数字时钟的时针，再缓慢移动，1分钟移动0.5度
-    let hourDeg = hours * 30 + minutes * 0.5;
+    let hourDeg = hours * 30 + minutes * ( 360 / 12 / 60 );
 
     // 更新时钟显示
     secondEl.style.transform = `translate(-50%, -100%) rotate(${ secondDeg }deg)`;
