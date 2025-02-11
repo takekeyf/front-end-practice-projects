@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin:0;
+}
+
+.empty{
+  width:15rem;
+  height: 15rem;
+  background-color: azure;
+  margin:1rem;
+  border:3px solid black;
+
+}
+
+.fill{
+  background-image: url(/img/drag-n-drop/img-001.png);
+  width:100%;
+  height: 100%;
+  background-size: cover;
+}
+.hold{
+  border: 3px dashed black;
+}
+/* 新增样式 */
+.invisible {
+    opacity: 0.2;
+}
+
+.hovered {
+    background-color: #f4f4f4;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+@media(max-width:80rem){
+  body{
+    flex-direction: column;
+  }
+}
