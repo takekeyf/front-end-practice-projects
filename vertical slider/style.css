@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'TiejiliSC Regular';
+  src: url('/fonts/TiejiliSC-Regular.otf') format('opentype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'TiejiliSC Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+
+body{
+  display: flex;
+  overflow: hidden;
+
+  
+}
+.container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  
+
+}
+.left-slider{
+  position: absolute;
+  left: 0;
+  width:25%;
+ 
+  transition: transform 0.5s ease-in-out;
+  
+  
+}
+
+.left-slider > div {
+  height: 100vh;
+  display: flex;           
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;    
+
+  
+ 
+}
+.right-slider{
+  position: absolute;
+  right: 0;
+  width:75%;
+   transition: transform 0.5s ease-in-out;
+}
+.right-slider > div {
+  height: 100vh;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: repeat;
+}
+
+.left-slider h1{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  
+}
+
+.left-slider p{
+  font-size: 2rem;
+  line-height: 2;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.5rem;
+  text-align: start;
+}
+
+button{
+  background-color: rgba(233, 3, 76, 0.756);
+  border: none;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+button:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+button i{
+  font-size:2.4rem;
+  color:#333;
+}
+.action-button{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index:100;
+  top:50vh;
+  left:25%;
+
+}
+.down-button, .up-button{
+  transform: translate(-100%,-50%);
+  transition: transform 0.5s ease-in-out;
+  
+}
+.down-button{
+  position: relative;
+  
+  top:6rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  
+}
+.up-button{
+   position: relative;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  top:-6rem;
+}
