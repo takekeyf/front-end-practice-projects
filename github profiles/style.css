@@ -1,0 +1,122 @@
+@font-face {
+            font-family: 'SarasaMonoSC-Regular';
+            src: url('/fonts/SarasaMonoSC-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'SarasaMonoSC-Regular', sans-serif;
+            font-size: 62.5%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            background-color: #f0f0f0;
+            justify-content: center;
+        }
+
+        .user-form {
+            margin: 2rem 0;
+        }
+
+        .search {
+            width: 80rem;
+            max-width: 90vw;
+            height: 4rem;
+            border: none;
+            border-radius: 1rem;
+            padding: 0 1.5rem;
+            font-size: 1.6rem;
+            box-shadow: 0 0.3rem 1rem rgba(234, 179, 179, 0.2);
+            background-color: rgba(226, 161, 161,0.8);
+            
+        }
+        .search:focus{
+          outline: none;
+        }
+
+        .main {
+            width: 80rem;
+            max-width: 90vw;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: rgba(241, 175, 175, 0.7);
+            border-radius: 2rem;
+            padding: 3rem;
+            display: flex;
+            gap: 3rem;
+            box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2);
+            align-items: center;
+        }
+
+        .avatar {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            border: 0.3rem solid #fff;
+
+        }
+
+        .user {
+            flex: 1;
+        }
+
+        .user-info h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .user-info p {
+            font-size: 1.6rem;
+            color: #444;
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            list-style-type: none;
+        }
+
+        ul li {
+            background-color: rgba(243, 133, 186, 0.7);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .repos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .repo {
+            text-decoration: none;
+            background-color: rgba(161, 161, 235, 0.7);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .error {
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.6rem;
+            color: #ff0000;
+        }
