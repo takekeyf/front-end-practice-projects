@@ -2,7 +2,7 @@ const form = document.querySelector( '.user-form' );
 const searchInput = document.querySelector( '.search' );
 const main = document.querySelector( '.main' );
 const axiosAPI = 'https://api.github.com/users/';
-
+const axiosRepos = '/repos?sort=created';
 
 form.addEventListener( 'keydown', async ( event ) => {
     if ( event.key === 'Enter' ) {
@@ -38,7 +38,7 @@ async function fetchUserData( username ) {
 
 async function fetchUserRepos( username ) {
     try {
-        const response = await axios.get( `${ axiosAPI }${ username }/repos?sort=created` );
+        const response = await axios.get( axiosAPI + username + axiosRepos );
         return response.data;
     } catch ( error ) {
         if ( error.response?.status === 403 ) {
