@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+        minimum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>password generator</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>密码生成器</h1>
+
+            <div class="password-container">
+                <div class="bag password">
+                    <input type="text" id="password" placeholder="生成的密码" readonly>
+                    <i class="fa-solid fa-clipboard" id="copy"></i>
+                </div>
+                <div class="bag length">
+                    <label for="length">密码长度</label>
+                    <input type="number" id="length">
+                </div>
+                <div class="bag uppercase">
+                    <label for="uppercase">包含大写字母</label>
+                    <input type="checkbox" id="uppercase">
+                </div>
+                <div class="bag lowercase">
+                    <label for="lowercase">包含小写字母</label>
+                    <input type="checkbox" id="lowercase">
+                </div>
+                <div class="bag numbers">
+                    <label for="numbers">包含数字</label>
+                    <input type="checkbox" id="numbers">
+                </div>
+                <div class="bag symbols">
+                    <label for="symbols">包含符号</label>
+                    <input type="checkbox" id="symbols">
+                </div>
+
+
+
+
+
+                <button id="generate">生成密码</button>
+
+
+            </div>
+        </div>
+
+
+
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
