@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'SarasaMonoSC-Regular';
+  src: url('/fonts/SarasaMonoSC-Regular.ttf') format('truetype');
+  
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'SarasaMonoSC-Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin:2rem;
+  background-color: azure;
+  
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  padding:2rem;
+  width:35rem;
+  height: 34rem;
+  background-color: antiquewhite;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  color:orange;
+
+
+}
+h3{
+  font-size: 2rem;
+ 
+  text-align: left;
+  padding:2rem;
+
+}
+.toggle-container{
+  display: flex;
+  flex-direction: column;
+  gap:1.8rem;
+  position: relative;
+  width: 100%;
+  
+}
+.toggle-group{
+  display: flex;
+  width:100%;
+  justify-content: center;
+
+  padding:0.8rem 0;
+  font-family: inherit;
+  font-size:1.5rem;
+  text-align: center;
+
+  align-items: center;
+  
+}
+.toggle-group span{
+  padding-left: 2rem;
+  font-size:2rem;
+  width:9rem;
+}
+.toggle{
+  visibility: hidden;
+  display: inline-block;
+  margin:0;
+  
+}
+.label{
+  width:8rem;
+  height: 4rem;
+  background-color: rgb(130, 130, 233);
+  border-radius: 3rem;
+  position: relative;
+}
+
+.label .ball{
+  width: 3rem;
+  position: absolute;
+  height: 3rem;
+  background-color: bisque;
+  border-radius: 50%;
+  top:0.5rem;
+  left:0.5rem;
+  transition: all 0.3s linear;
+
+
+}
+.toggle:checked + .label {
+  background-color: palevioletred;
+}
+.toggle + .label .ball{
+  animation: moveOff 0.3s linear forwards;
+}
+.toggle:checked + .label .ball{
+  animation: moveOn 0.3s linear forwards;
+}
+
+@keyframes moveOn{
+  0%{
+    transform: translateX(0rem) scale(1);
+  }
+  50%{
+    transform: translateX(2rem) scale(1.1);
+
+
+  }
+  100%{
+    transform: translateX(4rem) scale(1);
+  }
+
+}
+@keyframes moveOff{
+  0%{
+    transform: translateX(4rem) scale(1);
+  }
+  50%{
+    transform: translateX(2rem) scale(1.1);
+
+
+  }
+  100%{
+    transform: translateX(0rem) scale(1);
+  }
+
+}
