@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'SarasaMonoSC-Regular';
+  src: url('/fonts/SarasaMonoSC-Regular.ttf') format('truetype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'SarasaMonoSC-Regular', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: lightgoldenrodyellow;
+  position: relative;
+  display: flex;
+  
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  padding:10rem 2rem;
+}
+.add{
+  position:fixed;
+  top:1rem;
+  right:1rem;
+  font-family: inherit;
+  border: none;
+  background-color: lightcoral;
+  padding:1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+
+}
+.add .fa-plus{
+  font-family: inherit;
+  font-size:1.6rem;
+  color:white;
+  display: flex;
+  gap:0.8rem;
+}
+.add:active{
+  transform: scale(0.98);
+  background-color: lightpink;
+}
+.note{
+  font-family: inherit;
+  background-color: blanchedalmond;
+  width:40rem;
+  height: 40rem;
+  box-shadow:  0 0 1rem rgba(0,0,0,0.2);
+ 
+  
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+
+.tools{
+  display: flex;
+  justify-content: flex-end;
+  background-color: blueviolet;
+  height: 2.8rem;
+  align-items: center;
+  cursor:grab;
+ 
+  align-items: center;
+}
+.tools button{
+  border: none;
+  background-color: transparent;
+  padding:1rem;
+  color:white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.tools button:active{
+  transform: scale(0.98);
+  color: lightpink;
+}
+
+.text{
+  display: block;
+  width:100%;
+  height: calc(100% - 2.8rem);
+  border: none;
+  outline: none;
+  padding:2rem;
+  font-size:2rem;
+  font-family: inherit;
+  background-color: bisque;
+}
+.hidden {
+    display: none;
+   
+}
+.main{
+  font-size:1.5rem;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
