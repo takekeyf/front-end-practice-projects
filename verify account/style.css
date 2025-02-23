@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'SarasaMonoSC-Bold';
+  src: url('/fonts/SarasaMonoSC-Bold.ttf') format('truetype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'SarasaMonoSC-Bold', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin:0;
+  background-color: beige;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap:2rem;
+  background-color: palevioletred;
+  border-radius: 1rem;
+  width:60rem;
+  height: 40rem;
+  justify-content: center;
+  padding:5rem;
+  border:5px solid black;
+  position: relative;
+}
+.info{
+  width:50rem;
+  height: 15rem;
+  position: absolute;
+  background-color: paleturquoise;
+  top:55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  z-index:-1;
+  font-size:4rem;
+  
+}
+.info.active{
+  opacity: 1;
+  z-index:1;
+}
+.container-code{
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+  margin:6rem 0;
+}
+.code{
+  width:5rem;
+  height: 6rem;
+  font-size: 3rem;
+  font-family: inherit;
+  border:0;
+  text-align: center;
+  
+  
+}
+.code:focus{
+  outline: none;
+}
+.code::-webkit-outer-spin-button,.code::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+    margin:0;
+}
