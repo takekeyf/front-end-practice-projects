@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'SarasaMonoSC-Bold';
+  src: url('/fonts/SarasaMonoSC-Bold.ttf') format('truetype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+     font-family: 'SarasaMonoSC-Bold', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin:0;
+  background-color: beige;
+}
+.pannel{
+  width:60rem;
+  height:40rem;
+  background-color: #fff;
+  text-align: center;
+  padding:2rem;
+}
+strong,small{
+  font-size:2rem;
+
+  
+
+}
+.emoji-container{
+  padding:4rem 2rem;
+  display: flex;
+  gap:2rem;
+  justify-content: space-around;
+
+}
+.emoji{
+  width:10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  justify-content: center;
+  
+}
+.emoji.active{
+  background-color: lightslategray;
+}
+
+.emoji i{
+  font-size:4rem;
+  padding:0.8rem;
+  color:orange;
+ 
+}
+.emoji p{
+  font-size:2rem;
+
+}
+.btn{
+  margin-top:2rem;
+  font-size:2rem;
+  background-color: aquamarine;
+  width:10rem;
+  height: 6rem;
+  border:none;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:active{
+  background-color: aqua;
+  
+}
