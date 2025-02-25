@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'SarasaMonoSC-Bold';
+  src: url('/fonts/SarasaMonoSC-Bold.ttf') format('truetype');
+         
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+html{
+     font-family: 'SarasaMonoSC-Bold', sans-serif;
+     font-size:62.5%;
+     
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin:0;
+}
+.list{
+  list-style-type: none;
+}
+.list-small {
+  margin-left: 2em;  
+  list-style-type: '⇀ '; 
+}
+.logo1{
+  width:30rem;
+  height: auto;
+}
+.logo2{
+  width:20rem;
+  height: auto;
+  margin:1rem;
+
+}
+.nav-btn{
+  background-color: transparent;
+  border: none;
+  font-size:2rem;
+}
+.open-btn{
+  position: absolute;
+  top: 1rem;
+  left:1rem;
+}
+.nav-black{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width:40rem;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index:1;
+
+}
+.nav-black.visible{
+  transform: translateX(0);
+
+}
+.nav-red{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width:38rem;
+  background-color: red;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index:2;
+  
+
+}
+.nav-red.visible{
+  transform: translateX(0);
+}
+.nav-white{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width:36rem;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 4;
+  position: relative;
+}
+.nav-white.visible{
+  transform: translateX(0);
+}
+.close-btn{
+  position: absolute;
+  top: 2rem;
+  right:2rem;
+  
+}
+ul{
+  color:palevioletred;
+  font-size:2rem;
+
+}
+ul li{
+  margin:1rem;
+}
+
+ul li a{
+  /* 去掉下划线 */
+  text-decoration: none;
+}
+p{
+  font-size: 2.5rem;
+  color: palevioletred;
+  margin: 1rem;
+  text-align: center;
+  line-height: 6rem;
+}
